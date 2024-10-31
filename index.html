@@ -5,44 +5,273 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
+    <script src="https://kit.fontawesome.com/6d67a907ce.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Allan Cabaddu</div>
-        <div>
-            <ul class="links-nav">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="/images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="https://www.linkedin.com/in/allancabaddu/" target="_blank">LinkedIn</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tools">Tools</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            
+        </nav>
+        <div class="head-text">
+            <p>Junior Java Developer</p>
+            <h1>Hi, I am <span style="font-family: sans;  bold; color: red;">Allan</span><br>From Metro Manila</h1>
         </div>
+    </div>
+</div>
 
-    </nav>
-    <nav id="hamburger-nav"> 
-        <div class="logo">Allan Cabaddu</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
+<div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>With 10 years of experience in the Healthcare industry, I am now transitioning into the software development field. 
+                            My background includes expertise in revenue cycle management, data analysis and presentation, and problem-solving. 
+                            I am eager to leverage my analytical skills and passion for technology to develop innovative solutions in the healthcare and financial sectors.
+                            <br><br>In my free time, I enjoy reading books and manga, watching anime, editing videos and exploring Web App Pentesting.</p>
+                    <div class="tab-labels">
+                        <p class="tab-link activelink" onclick="opentab('skill-tab')">Skills</p>
+                        <p class="tab-link" onclick="opentab('exp-tab')">Experience</p>
+                        <p class="tab-link" onclick="opentab('educ-tab')">Education</p>
+                        <p class="tab-link" onclick="opentab('cert-tab')">Trainings</p>
+                    </div>
+                    <div class="tab-content activetab" id="skill-tab">
+                        <ul>
+                            <li><span>Java Backend Developer</span><br>Designs, implements, and maintains server-side applications and services.</li>
+                            <li><span>Web App Penetration Testing</span><br>Security assessments of web applications to identify and exploit vulnerabilities</li>
+                            <li><span>Quality Assurance</span><br>Ensures business processes meet standards and regulations, enhancing efficiency and compliance.</li>    
+                            <li><span>RCM and Insurance Domain Knowledge</span><br>Has an extensive domain knowledge in revenue cycle management, insurance, and the financial sector.</li>                            
+                        </ul>
+                    </div> 
+                    <div class="tab-content" id="exp-tab">
+                        <ul>
+                            <li><span>February 2023 - May 2024</span><br>Insurance Billing and Collections - MedVA</li>
+                            <li><span>February 2020 - January 2023</span><br>Insurance Billing and Collections - Optum</li>
+                            <li><span>November 2016 - March 2021</span><br>Part-time Insurance Advisor - Pru Life UK</li>
+                            <li><span>August 2018 - January 2020</span><br>Customer Service Rep - Cognizant</li>    
+                            <li><span>November 2012 - June 2018</span><br>Quality Analyst - Concentrix</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="educ-tab">
+                        <ul>
+                            <li><span> University of St. Louis, 2011</span><br>Associate in Computer Technology</li>
+                        </ul>
+                    </div>    
+                    <div class="tab-content" id="cert-tab">
+                        <ul>
+                            <li><span>Java Web Development Bootcamp</span><br>UPLIFT Code Camp</li>
+                            <li><span>IBM Cybersecurity Analyst</span><br>Coursera</li>
+                            <li><span>Practical Web App Security and Testing</span><br>TCM Security</li>
+                            <li><span>Web Penetration Testing and Bug Bounty</span><br>Udemy</li>
+                            <li><span>Japanese Language and Culture Level II</span><br>TESDA</li>    
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="menu-links">
-                    <li><a href="#about" onclick="toggleMenu()">About Me</a></li>
-                    <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contact Me</a></li>
+        </div>
+</div>
+
+<div id="tools">
+    <div class="container">
+        <h1 class="subtitle">Tools/Technologies</h1>
+        <div class="tool-list">
+            <div>
+                <img width="150" height="150" src="https://img.icons8.com/fluency/150/java-coffee-cup-logo.png" alt="java-coffee-cup-logo"/> 
+                <h2>Java</h2>
+                <h4><br>Intermediate</h4>
             </div>
-        </div>    
-    </nav>
+            <div>
+                <img width="150" height="150" src="https://img.icons8.com/color/150/spring-logo.png" alt="spring-logo"/> 
+                <h2>Spring Boot</h2>
+                <h4><br>Intermediate</h4>
+            </div>
+            <div>
+                <img width="150" height="150" src="https://img.icons8.com/color/150/git.png" alt="git"/>
+                <h2>Git</h2>
+                <h4><br>Experienced</h4>
+                <h5 style="font-size: 14px;">Github, Gitlab</h5>
+            </div>
+            <div>
+                <img width="150" height="150" src="https://img.icons8.com/color/150/database.png" alt="database"/>
+                <h2>Database</h2>
+                <h4><br>Intermediate</h4>
+                <h5 style="font-size: 14px;">MariaDB</h5>
+            </div>
+            <div>
+                <img width="150" height="150" src="https://img.icons8.com/color-glass/150/test.png" alt="test"/>
+                <h2>Testing Frameworks</h2>
+                <h4><br>Intermediate</h4>
+                <h5 style="font-size: 14px;">JUnit, Selenium</h5>
+            </div>
+            <div>
+                <img width="150" height="150" src="https://img.icons8.com/color/150/amazon-web-services.png" alt="amazon-web-services"/>
+                <h2>AWS</h2>
+                <h4><br>Intermediate</h4>
+            </div>
+            <div>
+                <img width="150" height="150" src="https://img.icons8.com/color/150/code.png" alt="code"/>
+                <h2>IDEs</h2>
+                <h4><br>Experienced</h4>
+                <h5 style="font-size: 14px;">IntelliJ, VSCode</h5>
+            </div>
+            <div>
+                <img width="150" height="150" src="https://img.icons8.com/color/150/javascript--v1.png" alt="javascript--v1"/>
+                <h2>Javascript</h2>
+                <h4><br>Basic</h4>
+            </div>
+            <div>
+                <img width="150" height="150" src="https://img.icons8.com/color/150/html-5--v1.png" alt="html-5--v1"/>
+                <h2>HTML</h2>
+                <h4><br>Basic</h4>
+            </div>
+            <div>
+                <img width="150" height="150" src="https://img.icons8.com/color/150/css3.png" alt="css3"/>
+                <h2>CSS</h2>
+                <h4><br>Basic</h4>
+            </div>
+            <div>
+                <img width="150" height="150" src="https://img.icons8.com/color/150/linux--v1.png" alt="linux--v1"/>
+                <h2>Linux</h2>
+                <h4><br>Experienced</h4>
+                <h5 style="font-size: 14px;">Kali, Ubuntu, Ubuntu Server<br>Linux Commands</h5>
+            </div>            
+        </div> 
+    </div>
+</div>
+
+<div id="projects">
+    <div class="container">
+        <h1 class="subtitle">Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Sample Project 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Sample Project 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Sample Project 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/acabaddu" class="btn" target="_blank">More on Github</a>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-regular fa-envelope"></i> acabaddu.medva@gmail.com</p>
+                <p><i class="fa-brands fa-skype"></i> live:.cid.42d43265902f20c4</p>
+                <div class="socials">
+                    <a href="https://www.facebook.com/profile.php?id=61555237480071" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/allancabaddu/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/acabaddu" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                </div>
+                <a href="https://drive.google.com/file/d/1TSniMuek7ZzcSU8YFTv3bnG8pLi6kzU1/view?usp=drive_link" target="_blank" download class="btn btn2">
+                    <i class="fa-sharp fa-regular fa-circle-down"></i> Download CV
+                </a>                
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="Email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" row="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="form-message"></span>
+            </div>    
+        </div>
+    </div>
+    <div class="copyright">© 2024 Allan Cabaddu. All Rights Reserved.</div>
+</div>
 
 
- <!-- This is test -->
+
+<!-- Script for the tab menu -->
+<script>
+    var tablinks = document.getElementsByClassName("tab-link");
+    var tabcontents = document.getElementsByClassName("tab-content");
+    function opentab(tabname) {
+        for(tablink of tablinks) {
+            tablink.classList.remove("activelink")
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("activetab")
+        }
+        event.currentTarget.classList.add("activelink");
+        document.getElementById(tabname).classList.add("activetab");
+    }
+</script>
+
+<!-- Script for the sidebar menu -->
+<script>
+    var sidebar = document.getElementById("sidemenu");
+    function openmenu() {
+        sidebar.style.right = "0";
+    }
+    function closemenu() {
+        sidebar.style.right = "-200px";
+    }
+    var menuItems = sidebar.getElementsByTagName("li");
+        for (var i = 0; i < menuItems.length; i++) {
+    menuItems[i].addEventListener("click", closemenu);
+    }
+</script>   
 
 
-    <script src="script.js"></script>
+<!-- This script is taken from https://github.com/jamiewilson/form-to-google-sheets. The purpose is 
+    1) to save the contact info to google sheets when users filled up the contact form 
+    2) Create a custom confirmation message once the form is submitted -->
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxJlUEwtMLU2vLJRtA7YZfxsJqsCCWNnOftBAuye7ZZrSQI7w19QrM9TT6AsicR_qw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("form-message")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully."
+            setTimeout(function() {
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
